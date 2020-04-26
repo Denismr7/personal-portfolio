@@ -234,3 +234,56 @@ nav {
     }
     }
 }
+// Media query for mobile
+@media screen and (max-width: 750px) {
+    #navbar {
+        position: fixed;
+        top: unset;
+        bottom: 0px;
+        #navtitle {
+            opacity: 0;
+        }
+    }
+    #welcome-section {
+        height: 100vh;
+        #scroll-down {
+            opacity: 0;
+        }
+    }
+    #about {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        #about-cont-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #about-text {
+                font-size: 1rem;
+                width: 80vw;
+            }
+            #personal-photo {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    #about, #projects {
+        height: max-content;
+        width: 100%;
+    }
+    #contact {
+        height: 100vh;
+        width: 100%;
+        #contact-info-container {
+            display: flex;
+            flex-direction: column;
+            .contact-item {
+                padding-bottom: 15%;
+                .contact-title-bg {
+                    opacity: 1;
+                }
+        }
+    }
+    }
+}
