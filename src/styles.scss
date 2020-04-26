@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+// Color theme
+$color1: #c1a57b;
+$color2: #ececec;
+$color3: #30475e;
+
+// Colors applied
+$nav-bg: #222831;
+$nav-txt: $color1;
+$welcome-bg: #30475eb3;
+$welcome-txt1: $color2;
+$welcome-txt2: $color1;
+$projects-bg: $color2;
+$about-bg: $color1;
+$about-txt: $color2;
+$contact-bg: #30475e;
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+html {
+    scroll-behavior: smooth;
+    box-sizing: content-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 50px;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+nav {
+    background-color: #222831;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;
+    color: $color1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font: {
+        size: 1.25em;
+        weight: 600;
+    }
+    z-index: 4;
+    #navtitle {
+        padding-left: 20px;
+    }
+    #navlinks-container {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-right: 25px;
+        .nav-link {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+#welcome-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-image: url(https://i.imgur.com/Ha1UiA2.jpg);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    h1 {
+        color: $welcome-txt1;
+    }
+    h2 {
+        color: $welcome-txt2;
+    }
+    #scroll-down {
+        margin: 150px auto 25px auto;
+        position: relative;
+        top: 30%;
+        img {
+            width: 40px;
+            height: auto;
+        }
+        p {
+            font: {
+                size: 0.9rem;
+                weight: 300;
+            }
+            padding-bottom: 7px;
+        }
+    }
+}
