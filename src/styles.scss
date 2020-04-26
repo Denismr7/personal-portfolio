@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
-// Color theme
-$color1: #c1a57b;
-$color2: #ececec;
-$color3: #30475e;
-
-// Colors applied
-$nav-bg: #222831;
-$nav-txt: $color1;
-$welcome-bg: #30475eb3;
-$welcome-txt1: $color2;
-$welcome-txt2: $color1;
-$projects-bg: $color2;
-$about-bg: $color1;
-$about-txt: $color2;
-$contact-bg: #30475e;
+@import './colors.scss';
 
 * {
     margin: 0;
@@ -42,13 +28,13 @@ h2 {
     font-weight: 300;
 }
 nav {
-    background-color: #222831;
+    background-color: $nav-bg;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 40px;
-    color: $color1;
+    color: $nav-txt;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -198,7 +184,7 @@ nav {
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
-    background-color: #30475e;
+    background-color: $color3;
     text-align: center;
     color: $color2;
     #contact-info-container {

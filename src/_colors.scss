@@ -1,0 +1,14 @@
+// Color theme
+$color1: #c1a57b;
+$color2: #ececec;
+$color3: #30475e;
+
+// Colors applied
+$nav-bg: darken($color3, 10%);
+$nav-txt: $color2;
+$welcome-txt1: $color2;
+$welcome-txt2: $color1;
+$projects-bg: $color2;
+$about-bg: $color1;
+$about-txt: $color2;
+$contact-bg: $color3;
