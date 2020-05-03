@@ -202,9 +202,6 @@ nav {
             width: 50px;
             height: auto;
             margin-bottom: 10px;
-            &:hover {
-                cursor: pointer;
-            }
             &:hover + .contact-title-bg {
                 opacity: 1;
             }
@@ -214,6 +211,9 @@ nav {
             height: 25px;
             background-color: rgba(54, 54, 54, 0.5);
             opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
         }
         .contact-title {
             padding-top: 2px;
