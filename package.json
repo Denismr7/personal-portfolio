@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Denismr7/personal-website#readme",
   "dependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.5",
+    "typescript": "^3.8.3"
   }
 }
