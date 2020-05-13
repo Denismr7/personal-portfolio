@@ -40,25 +40,23 @@ nav {
     color: $nav-txt;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font: {
         size: 1.25em;
         weight: 600;
     }
     z-index: 4;
-    #navtitle {
-        padding-left: 20px;
-    }
-    #navlinks-container {
-        display: flex;
-        flex-flow: row nowrap;
-        padding-right: 25px;
         .nav-link {
             padding-left: 20px;
             padding-right: 20px;
+            border-radius: 31px 31px 31px 31px;
+            margin: 2px;
+            &:hover {
+                background-color: whitesmoke;
+                color: $color1;
+            }
         }
-    }
 }
 #welcome-section {
     text-align: center;
@@ -230,9 +228,7 @@ nav {
         position: fixed;
         top: unset;
         bottom: 0px;
-        #navtitle {
-            opacity: 0;
-        }
+        font-size: small;
     }
     #welcome-section {
         height: 100vh;
