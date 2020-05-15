@@ -48,13 +48,11 @@ nav {
     }
     z-index: 4;
         .nav-link {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 0.2% 1.5%;
             border-radius: 31px 31px 31px 31px;
             margin: 2px;
             &:hover {
-                background-color: whitesmoke;
-                color: $color1;
+                background-color: lighten($color: $nav-bg, $amount: 10);
             }
         }
 }
@@ -93,7 +91,7 @@ nav {
     }
 }
 #about {
-    background-color: $about-bg;
+    background-image: $about-bg;
     color: $about-txt;
     width: 100%;
     height: 100vh;
@@ -117,6 +115,7 @@ nav {
             padding: 30px;
             width: 30%;
             height: auto;
+            color: $color2;
             background-color: rgba(54, 54, 54, 0.5);
             border-radius: 11px 11px 11px 11px;
             -moz-border-radius: 11px 11px 11px 11px;
@@ -195,9 +194,9 @@ nav {
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
-    background-color: $color3;
+    background-image: $contact-bg;
     text-align: center;
-    color: $color2;
+    color: $color4;
     #contact-info-container {
         display: flex;
         flex-flow: row wrap;
@@ -206,6 +205,7 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            color: $color2;
             align-items: center;
         
         .icon {

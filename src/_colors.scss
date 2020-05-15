@@ -2,13 +2,14 @@
 $color1: #c1a57b;
 $color2: #ececec;
 $color3: #30475e;
+$color4: #1a1a1a;
 
 // Colors applied
-$nav-bg: darken($color3, 10%);
+$nav-bg: $color4;
 $nav-txt: $color2;
 $welcome-txt1: $color2;
 $welcome-txt2: $color1;
 $projects-bg: $color2;
-$about-bg: $color1;
-$about-txt: $color2;
-$contact-bg: $color3;
+$about-bg: linear-gradient(darken($color: $color2, $amount: 10), $color2);
+$about-txt: $color4;
+$contact-bg: linear-gradient($color2, darken($color: $color2, $amount: 20));
