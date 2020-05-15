@@ -58,12 +58,20 @@ nav {
     }
     z-index: 4;
         .nav-link {
-            padding: 0.2% 1.5%;
-            border-radius: 31px 31px 31px 31px;
-            margin: 2px;
+            width: 34%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover {
                 background-color: lighten($color: $nav-bg, $amount: 10);
             }
+        }
+        .about {
+            border-radius: 31px 0px 0px 31px;
+        }
+        .contact {
+            border-radius: 0px 31px 31px 0px;
         }
 }
 #welcome-section {
