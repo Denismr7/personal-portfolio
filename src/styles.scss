@@ -44,7 +44,9 @@ nav {
     }
     background-color: $nav-bg;
     position: fixed;
-    animation: navbarAppear 0.4s ease-out forwards;
+    @media screen and (min-width: 751px) {
+        animation: navbarAppear 0.4s ease-out forwards;
+    }
     border-radius: 31px 31px 31px 31px;
     box-shadow: -5px 7px 20px -4px rgba(0,0,0,0.76);
     color: $nav-txt;
@@ -64,7 +66,7 @@ nav {
             align-items: center;
             justify-content: center;
             &:hover {
-                background-color: lighten($color: $nav-bg, $amount: 10);
+                background-color: lighten($color: $nav-bg, $amount: 5);
             }
         }
         .about {
@@ -287,7 +289,9 @@ nav {
     #navbar {
         position: fixed;
         top: unset;
-        bottom: 0px;
+        bottom: 2%;
+        width: 60%;
+        height: 40px;
         font-size: small;
     }
     #welcome-section {
