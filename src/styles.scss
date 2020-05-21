@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
-@import './colors.scss';
+@import './_colors.scss';
 
 * {
     margin: 0;
@@ -67,7 +67,7 @@ nav {
             align-items: center;
             justify-content: center;
             &:hover {
-                background-color: lighten($color: $nav-bg, $amount: 5);
+                background-color: lighten($color: $nav-bg, $amount: 15);
             }
         }
         .about {
@@ -354,6 +354,16 @@ nav {
                 display: none;
             }
         }
+        #projects-container {
+            .project-tile {
+                width: 90%;
+                margin-bottom: 1.5rem;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
     }
     #contact {
         height: 100vh;
@@ -368,5 +378,8 @@ nav {
                 }
         }
     }
+    }
+    .title-container {
+        margin-bottom: 2rem;
     }
 }
