@@ -125,9 +125,23 @@
             <h1>Let's work toghether</h1>
             <h2>What are we waiting for?</h2>
         </div>
-        <div id="myForm">Here goes my form</div>
+        <form id="form">
+            <div>
+                <label for="name">Your name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div>
+                <label for="email">Your email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Your message</label>
+                <textarea name="message" id="message" required></textarea>
+            </div>
+            <button>Send message</button>
+        </form>
         <div id="contact-info-container">
-            <p id="text-container">I'm looking forward to know what's on your mind. If you have some projects, ideas or you just want to say hello, I'm here waiting for your message!</p>
+            <p id="text-container">I'm looking forward to know what's on your mind! If you have some projects, ideas or you just want to say hello, I'm here waiting for your message!</p>
             <div id="email-container">
                 <h3><i class="fas fa-envelope"></i> Send me an email</h3>
                 <p>denismr7@gmail.com</p>
