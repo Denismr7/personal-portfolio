@@ -362,6 +362,10 @@ nav {
         z-index: 2;
     }
     #welcome-section {
+        h2 {
+            margin-top: 5%;
+            font-size: 1rem;
+        }
         #scroll-down {
             opacity: 0;
         }
