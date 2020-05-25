@@ -104,6 +104,20 @@ nav {
         color: $welcome-txt1;
         font-size: 5rem;
         padding-bottom: 10px;
+        span {
+            position: relative;
+        }
+        span::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 0.3rem;
+            left: 0.3rem;
+            width: 12.5rem;
+            height: 0.8rem;
+            background-color: $color1;
+            z-index: -1;
+        }
     }
     h2 {
         color: $welcome-txt2;
