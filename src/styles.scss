@@ -328,7 +328,7 @@ nav {
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        margin-right: 20%;
+        margin-right: 0;
         #text-container {
             font-size: 1.25rem;
             width: 50%;
@@ -355,10 +355,11 @@ nav {
     #navbar {
         position: fixed;
         top: unset;
-        bottom: 2%;
-        width: 60%;
+        bottom: 2vh;
+        width: 15rem;
         height: 40px;
         font-size: small;
+        z-index: 2;
     }
     #welcome-section {
         #scroll-down {
@@ -375,6 +376,7 @@ nav {
             align-items: center;
             #about-text {
                 font-size: 1rem;
+                margin-top: 4%;
                 width: 80vw;
             }
             #personal-photo {
@@ -385,10 +387,10 @@ nav {
     }
     #tec {
         height: 100vh;
+        margin-bottom: 50%;
         &-items-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(auto, 1fr);
-        padding-bottom: 25%;
             .tec-item {
                 width: 100px;
                 .tec-img {
