@@ -230,6 +230,9 @@ nav {
         .project-tile {
             position: relative;
             text-align: center;
+            .project-mobile {
+                display: none;
+            }
         }
         .project-name {
             position: absolute;
@@ -415,12 +418,41 @@ nav {
             }
         }
         #projects-container {
+            flex-flow: column nowrap;
+            align-items: center;
             .project-tile {
-                width: 90%;
-                margin-bottom: 1.5rem;
+                width: 70%;
+                margin-bottom: 5rem;
                 img {
                     width: 100%;
                     height: auto;
+                }
+                .project-item {
+                    position: relative;
+                    .project-mobile {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        position: absolute;
+                        bottom: -2rem;
+                        width: 100%;
+                        background-color: $color1;
+                        height: 3rem;
+                        font-weight: 600;
+                        color: $color4;
+                        .project-tec-icons {
+                            font-size: 1.3rem;
+                            * {
+                                margin-right: 5px;
+                            }
+                            .fa-html5 {
+                                color: #FD7E14;
+                            }
+                            .fa-css3-alt {
+                                color: #0171BD;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -14,5 +14,6 @@ const scene = new ScrollMagic.Scene({
 }).setTween(tl).addTo(controller);
 
 const scene2 = new ScrollMagic.Scene({
-    triggerElement: ".title-container"
+    triggerElement: ".title-container",
+    triggerHook: 100
 }).setTween(tl2).addTo(controller);
