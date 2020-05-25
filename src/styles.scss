@@ -59,7 +59,7 @@ nav {
         size: 1.25em;
         weight: 600;
     }
-    z-index: 4;
+    z-index: 2;
         .nav-link {
             width: 34%;
             height: 100%;
@@ -68,6 +68,7 @@ nav {
             justify-content: center;
             &:hover {
                 background-color: lighten($color: $nav-bg, $amount: 15);
+                color: $color1;
             }
         }
         .about {
@@ -80,34 +81,41 @@ nav {
 #welcome-section {
     text-align: center;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-image: url(https://i.imgur.com/Ha1UiA2.jpg);
+    background: url(https://i.imgur.com/xpYWnGq.jpg);
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    z-index: 3;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: $color4;
+        opacity: 0.82;
+    }
+    h1, h2, #scroll-down {
+        z-index: 1;
+    }
     h1 {
         color: $welcome-txt1;
+        font-size: 5rem;
+        padding-bottom: 10px;
     }
     h2 {
         color: $welcome-txt2;
     }
     #scroll-down {
-        margin: 150px auto 25px auto;
-        position: relative;
-        color: whitesmoke;
-        top: 30%;
-        img {
-            width: 40px;
-            height: auto;
-        }
-        p {
-            font: {
-                size: 0.9rem;
-                weight: 300;
-            }
-            padding-bottom: 7px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        i {
+            color: $color2;
+            font-size: 1.25rem;
+            opacity: 0.9;
         }
     }
 }
@@ -115,7 +123,7 @@ nav {
     color: $about-txt;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -137,9 +145,7 @@ nav {
             height: auto;
             color: $color2;
             background-color: rgba(54, 54, 54, 0.5);
-            border-radius: 11px 11px 11px 11px;
-            -moz-border-radius: 11px 11px 11px 11px;
-            -webkit-border-radius: 11px 11px 11px 11px;
+            border-radius: 25px;
             border: 0px solid #000000;
         }
     }
@@ -179,7 +185,7 @@ nav {
 #projects {
     width: 100%;
     height: 100vh;
-    z-index: 3;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,7 +246,7 @@ nav {
 #contact {
     width: 100%;
     height: 80vh;
-    z-index: 3;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,7 +312,6 @@ nav {
         font-size: small;
     }
     #welcome-section {
-        height: 100vh;
         #scroll-down {
             opacity: 0;
         }
