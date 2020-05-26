@@ -325,6 +325,10 @@ nav {
             border: 1px solid $color4;
             font-size: 1rem;
             cursor: pointer;
+            transition: $transition;
+            &:hover {
+                background: darken($color: $color1, $amount: 10);
+            }
         }
     }
     #contact-info-container {
@@ -350,6 +354,8 @@ nav {
         }
     }
 }
+
+
 // Media query for mobile
 @media screen and (max-width: 750px) {
     section {
@@ -460,18 +466,26 @@ nav {
     #contact {
         height: 100vh;
         width: 100%;
-        #contact-info-container {
-            display: flex;
-            flex-direction: column;
-            .contact-item {
-                padding-bottom: 15%;
-                .contact-title-bg {
-                    opacity: 1;
-                }
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 20%;
+        .title-container {
+            text-align: center;
         }
-    }
-    }
-    .title-container {
-        margin-bottom: 2rem;
+        #form {
+            grid-row: 2/3;
+            button {
+                width: 12rem;
+                height: 2.5rem;
+                margin-top: 4%;
+            }
+        }
+        #contact-info-container {
+            grid-row: 3/4;
+            align-items: center;
+            #text-container {
+                display: none;
+            }
+        }
     }
 }
