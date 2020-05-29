@@ -21,13 +21,29 @@ a {
     color: inherit;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    position: relative;
     font-weight: 700;
     padding-bottom: 20px;
 }
 h2 {
     font-size: 1.5rem;
     font-weight: 300;
+}
+#about, #tec, #projects, #contact {
+    h1 {
+        &::after {
+            content: "";
+            width: 6rem;
+            height: 4px;
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            background-color: $color1;
+            opacity: 0.6;
+            z-index: -1;
+        }
+    }
 }
 nav {
     @keyframes navbarAppear {
@@ -142,8 +158,8 @@ nav {
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
-    h1 {
-        text-align: center;
+    .title-container {
+        align-self: center;
     }
     #personal-photo {
         width: 450px;
