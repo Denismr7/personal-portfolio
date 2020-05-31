@@ -1,7 +1,10 @@
+// Transition
+$transition: all 0.3s ease;
+
 // Color theme
-$color1: #c1a57b;
+$color1: #8685ef;
 $color2: #ececec;
-$color3: #30475e;
+$color3: #d1cee1;
 $color4: #1a1a1a;
 
 // Colors applied
@@ -10,6 +13,6 @@ $nav-txt: $color2;
 $welcome-txt1: $color2;
 $welcome-txt2: $color1;
 $projects-bg: $color2;
-$about-bg: linear-gradient(darken($color: $color2, $amount: 10), $color2,darken($color: $color2, $amount: 20));
+$about-bg: darken($color: $color2, $amount: 5);
 $about-txt: $color4;
 $contact-bg: linear-gradient($color2, darken($color: $color2, $amount: 20));
