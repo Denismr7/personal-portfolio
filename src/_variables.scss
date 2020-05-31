@@ -13,6 +13,6 @@ $nav-txt: $color2;
 $welcome-txt1: $color2;
 $welcome-txt2: $color1;
 $projects-bg: $color2;
-$about-bg: linear-gradient(darken($color: $color2, $amount: 10), $color2,darken($color: $color2, $amount: 20));
+$about-bg: darken($color: $color2, $amount: 5);
 $about-txt: $color4;
 $contact-bg: linear-gradient($color2, darken($color: $color2, $amount: 20));
