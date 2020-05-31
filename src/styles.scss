@@ -50,6 +50,7 @@ h2 {
             z-index: -1;
         }
     }
+    margin-bottom: 5%;
 }
 nav {
     @keyframes navbarAppear {
@@ -112,6 +113,7 @@ nav {
     background-size: cover;
     width: 100%;
     height: 100vh;
+    margin-bottom: 5%;
     &::after {
         content: "";
         position: absolute;
@@ -199,12 +201,12 @@ nav {
 #about {
     color: $about-txt;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     .title-container {
         align-self: center;
     }
@@ -244,9 +246,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    height: 100vh;
+    min-height: 70vh;
     .title-container {
         text-align: center;
     }
@@ -255,9 +257,9 @@ nav {
         height: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
+        grid-template-rows: repeat(2, 250px);
         column-gap: 5%;
-        row-gap: 15%;
+        row-gap: 5%;
         justify-items: center;
         align-items: center;
         .tec-item {
@@ -266,8 +268,8 @@ nav {
             flex-direction: column;
             align-items: center;
             .tec-img {
-                width: 200px;
-                height: 200px;
+                width: 70%;
+                height: 70%;
             }
             .tec-title {
                 padding-top: 10%;
@@ -297,7 +299,6 @@ nav {
         min-height: 50vh;
         justify-content: space-around;
         margin-top: 4rem;
-        margin-bottom: 5rem;
         .projects-item {
             display: flex;
             width: 50rem;
@@ -309,7 +310,7 @@ nav {
             box-shadow: -6px -6px 16px 0px rgba(255,255,255,0.5), 6px 6px 16px 0px rgba(177,177,177,0.5);
             border-radius: 10px;
             &-img {
-                width: 14rem;
+                width: 13rem;
                 img {
                     width: 100%;
                     border-radius: 5px;
@@ -369,6 +370,9 @@ nav {
                     }
                 }
             }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -380,9 +384,8 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-    row-gap: 3%;
+    row-gap: 10%;
     color: $color4;
-    padding-bottom: 5%;
     .title-container {
         grid-column: 1/3;
         display: flex;
@@ -392,13 +395,12 @@ nav {
         h1 {
             padding-bottom: 3px;
         }
-        margin-bottom: 3%;
     }
     #form {
-        margin-left: 20%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-left: 30%;
         div {
             display: flex;
             width: 100%;
@@ -472,6 +474,12 @@ nav {
     section {
         margin-bottom: 15%;
     }
+    h2 {
+        font-size: 1.20rem;
+    }
+    #about, #tec, #projects, #contact {
+        margin-bottom: 10%;
+    }
     #navbar {
         position: fixed;
         top: unset;
@@ -535,41 +543,38 @@ nav {
         width: 100%;
     }
     #projects {
+        .title-container {
+            h2 {
+                text-align: center;
+            }
+        }
         #projects-container {
-            flex-flow: column nowrap;
-            align-items: center;
-            .project-tile {
-                width: 70%;
-                margin-bottom: 5rem;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-                .project-item {
-                    position: relative;
-                    .project-mobile {
-                        display: flex;
-                        justify-content: space-around;
+            .projects-item {
+                flex-direction: column;
+                justify-content: space-around;
+                height: 35rem;
+                width: 15rem;
+                &-content {
+                    justify-content: space-evenly;
+                    margin-left: 0;
+                    flex: initial;
+                    height: 19rem;
+                    .content-description {
+                        margin-bottom: 0;
+                    }
+                    .content-icons-container {
+                        flex-direction: column;
                         align-items: center;
-                        position: absolute;
-                        bottom: -2rem;
-                        width: 100%;
-                        background-color: $color1;
-                        height: 3rem;
-                        font-weight: 600;
-                        color: $color4;
-                        .project-tec-icons {
-                            font-size: 1.3rem;
-                            * {
-                                margin-right: 5px;
+                        flex: 1;
+                        .icons-cta {
+                            width: 80%;
+                            justify-content: center;
+                            button {
+                                height: 2.75rem;
+                                width: 6.25rem;
+                                font-size: 1.15rem;
                             }
-                            .fa-html5 {
-                                color: #FD7E14;
-                            }
-                            .fa-css3-alt {
-                                color: #0171BD;
-                            }
-                        }
+                    }
                     }
                 }
             }
@@ -580,12 +585,22 @@ nav {
         width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 5%;
         margin-bottom: 20%;
         .title-container {
             text-align: center;
         }
         #form {
             grid-row: 2/3;
+            margin-left: 0;
+            align-items: center;
+            div {
+                margin-bottom: 3%;
+                width: 80%;
+                input, textarea {
+                    width: auto;
+                }
+            }
             button {
                 width: 12rem;
                 height: 2.5rem;
